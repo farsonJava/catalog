@@ -16,7 +16,7 @@ In order to run this application you need Tomcat 9+.
 ## Understanding the client model and HTTP to master the control flow of java servlet programs
 
 Although HTTP methods are stateless, they suggest a client model. In order to become comfortable with 
-the servlet API and have command over the control flow of your program its important to distinguish between the session-scope, and 
-the request scope. 
+the servlet API and have command over the control flow of your program it's important to distinguish between the various components
+of an HTTP request including headers, body, and cookies. 
 
 
