@@ -13,10 +13,13 @@ public class AccessServlet extends HttpServlet {
 	private DatabaseManager db;
 	private CartManager cartManager;
 	private static final long serialVersionUID = 109L;
-	
+	private String usersPath;
+	private String cartsPath;
 	@Override
 	public void init() {
-		this.db = new DatabaseManager();
+		this.usersPath = getServletContext().getRealPath("/WEB-INF/database/users.txt");
+		this.cartsPath = getServletContext().getRealPath("/WEB-INF/database/carts.txt");
+		this.db = new DatabaseManager(usersPath, cartsPath);
 		this.userManager = new UserManager(db.getUsers());
 		 cartManager = new CartManager(db.getUserCarts());
 		 
