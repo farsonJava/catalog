@@ -1,4 +1,4 @@
-# catalog
+# Servlets from Scratch
 Simple backend servlets made from using the Tomcat Servlet container for studying server-side logic on a lower level.
 
 This project was developed for educational purposes during the course of my studies on the inner workings of servlet containers,
@@ -10,5 +10,8 @@ the java servlet api so far as they can be the points at which data is retrieved
 (on destroy). 
 
 In order to run this application you need Tomcat 9+. 
+
+# Challenges
+
 
 
