@@ -19,4 +19,11 @@ Although HTTP methods are stateless, they suggest a client model. In order to be
 the servlet API and have command over the control flow of your program it's important to distinguish between the various components
 of an HTTP request including headers, body, and cookies. 
 
+Recognizing their utility and how they are captured in java objects as classes
+and their properties allowed me to efficiently reason about my application. I was able
+to visualize the flow of the data passed into the program so that I could make security optimizations based on
+awareness of scope. 
+
+
+
 
