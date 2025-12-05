@@ -32,6 +32,8 @@ Java objects are serialized by the persistence mechanism, allowing them to persi
 
 <img width="764" height="437" alt="image6" src="https://github.com/user-attachments/assets/14dc0352-2cce-4439-a69b-383497ddb696" />
 
-This is code taken from the loginAction method in the access servlet thats part of a series of conditional statements which is evaluating session data to prevent
+This is code taken from the loginAction method in the access servlet that's part of a series of conditional statements which is evaluating session data to prevent
 users from being able to log in with stale session data after reverting back to the login page. The conditional statement in the article shown above is checking whether the 
-session attributes are not null, and then whether they correspond to the request sent by the client by an html submission form. 
+session attributes are not null, and then whether they correspond to the request attribute data which was sent by the client using an HTMLsubmission form. 
+
+
