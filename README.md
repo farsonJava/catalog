@@ -24,10 +24,9 @@ and their properties allowed me to efficiently reason about my application. I wa
 to visualize the flow of the data passed into the program so that I could make security optimizations based on
 awareness of scope. 
 
-The synergy between our session attributes, java objects, and request parameters is the key to unlocking
-control over the logic of our backend application. Tomcat propogates the session attributes untill shutdown,
-request parameters remain per individual request, and our java objects are serialized by our persistence 
-mechanism and remain to be used after the program restarts (or conceptually when the user logs in and out).
+The synergy between session attributes, Java objects, and request parameters is key to controlling the logic of our backend application.
+Tomcat propagates session attributes until shutdown, request parameters exist only for individual requests, and our 
+Java objects are serialized by the persistence mechanism, allowing them to persist across program restarts—or conceptually, across user logins and logouts.
 
 
 
