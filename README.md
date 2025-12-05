@@ -13,7 +13,7 @@ the java servlet api so far as they can be the points at which data is retrieved
 In order to run this application you need Tomcat 9+. 
 
 # Challenges
-## Understanding the client model and HTTP to master the control flow of java servlet programs
+## Understanding the client model and HTTP to control the flow of java servlet programs by secure session handling
 
 Although HTTP methods are stateless, they suggest a client model. In order to become comfortable with 
 the servlet API and have command over the control flow of your program it's important to distinguish between the various components
