@@ -6,7 +6,7 @@ the java-servlet api + HTTP, design patterns as well as common implementations o
 
 The front end aspect of this project is minimal and serves only as a hook for implementing backend processes. Persistence 
 is achieved in this project using file I/O streams in order to showcase the usage of init() and destroy() methods from
-the java servlet api so far as they can be the points at which data is retrieved (on initilization) or written to a database
+the java servlet api so far as they can be the points at which data is retrieved (on initialization) or written to a database
 (on destroy). 
 
 In order to run this application you need Tomcat 9+. 
