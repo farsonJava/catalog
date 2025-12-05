@@ -4,6 +4,7 @@ Simple backend servlets made from using the Tomcat Servlet container for studyin
 This project was developed for educational purposes during the course of my studies on the inner workings of servlet containers,
 the java-servlet api + HTTP, design patterns as well as common implementations of data structures in backend applications. 
 
+ ### note: 
 The front end aspect of this project is minimal and serves only as a hook for implementing backend processes. Persistence 
 is achieved in this project using I/O streams in order to showcase the usage of init() and destroy() methods from
 the java servlet api so far as they can be the points at which data is retrieved (on initialization) or written to a database
@@ -12,6 +13,10 @@ the java servlet api so far as they can be the points at which data is retrieved
 In order to run this application you need Tomcat 9+. 
 
 # Challenges
+## Understanding the client model and HTTP to master control flow while using the servlet api
 
+Although HTTP methods are stateless, they suggest a client model. In order to become comfortable with 
+the servlet API and have command over the control flow of your program its important to distinguish between the session-scope, and 
+the request scope. 
 
 
