@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Catalog</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+		
+	<body>
+		<nav class="navbar">
+			<form>
+				<button class="cart-button" name="action" type="submit" formmethod="get" formaction="/catalog/cart"  value="cart">My Cart</button>
+				<button class="cart-button" name="action" type="submit" formmethod="post" formaction="/catalog/access"  value="logout">Logout</button>
+			</form>
+		</nav>
+		<h1>Catalog</h1>
+	
+		<div class="catalog">
+			
+			<form name="catalogItem" method="post" action="/catalog/cart">
+				<div class="item">
+					<figure>
+						<img class="cart-img" src="https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=881&q=80">
+						<figcaption>Soccer Ball - $25</figcaption>
+					</figure>
+					<input type="hidden" name="imgAddress" value="https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=881&q=80">
+					<input type="hidden" name="itemName" value="Soccer Ball">
+					<input type="hidden" name="itemPrice" value="25">
+					<button class="cart-button" name="action" type="submit">Add to Cart</button>
+				</div>
+			</form>
+			
+			
+			<form name="catalogItem" method="post" action="/catalog/cart">
+				<div class="item">
+					<figure>
+						<img class="cart-img" src="https://images.unsplash.com/photo-1607081758973-b85919737e26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80">
+						<figcaption>Colored Pencils - $15</figcaption>
+					</figure>
+					<input type="hidden" name="imgAddress" value="https://images.unsplash.com/photo-1607081758973-b85919737e26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80">
+					<input type="hidden" name="itemName" value="Colored Pencils">
+					<input type="hidden" name="itemPrice" value="15">
+					<button class="cart-button" name="action" type="submit">Add to Cart</button>
+				</div>
+			</form>
+			
+			<form name="catalogItem" method="post" action="/catalog/cart">
+				<div class="item">
+					<figure>
+						<img class="cart-img" src="https://images.unsplash.com/photo-1582572426223-d152057ba012?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80">
+						<figcaption>Espresso Machine - $100</figcaption>
+					</figure>
+					<input type="hidden" name="imgAddress" value="https://images.unsplash.com/photo-1582572426223-d152057ba012?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=804">
+					<input type="hidden" name="itemName" value="Espresso Machine">
+					<input type="hidden" name="itemPrice" value="100">
+					<button class="cart-button" name="action" type="submit">Add to Cart</button>
+				</div>
+			</form>
+		</div>
+	</body>
+
+</html>

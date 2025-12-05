@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>My Shop</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	
+	<body>
+		<main class="access">
+			<h1> Sign In</h1>
+			<form class="access-form" name="loginForm" method="post" action="/catalog/access">
+				<div class="form-row">
+					<label for="email">Email:</label>
+					<input class="text-input" type="email" name="email">
+				</div>
+				<div class="form-row">
+					<label for="password">Password:</label>
+					<input class="text-input" type="password" name="password">
+				</div>
+				<div class="form-row">
+					<button class="cart-button" type="submit" name="action" value="login">Login</button>
+					<form>
+						<button class="cart-button" type="submit" formaction="/catalog/register.html">Register</button>
+					</form>
+				</div>
+			</form>
+		</main>
+	</body>
+</html>

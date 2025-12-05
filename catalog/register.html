@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+	<head>
+		<title>My Shop</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	
+	<body>
+		<main class="access">
+
+			<h1>Sign Up</h1>
+			<form class="access-form" name="registerForm" method="post" action="/catalog/access">
+				<div class="form-row">
+					<label for="email">Email:</label>
+					<input class="text-input" type="email" name="email"><br>
+				</div>
+				<div class="form-row">
+					<label for="firstName">First Name:</label>
+					<input class="text-input" type="text" name="firstName"><br>
+				</div>
+				<div class="form-row">
+					<label for="lastName">Last Name:</label>
+					<input class="text-input" type="text" name="lastName"><br>
+				</div>
+				<div class="form-row">
+					<label for="password">Password:</label>
+					<input class="text-input" type="password" name="password"><br>
+				</div>
+				<div class="form-row">
+					<button class="cart-button" type="submit" name="action" value="register">Register</button>
+					<form>
+						<button class="cart-button" type="submit" formaction="/catalog/login.html">Login</button>
+					</form>
+				</div>
+			</form>
+		</main>
+	</body>
+</html>
