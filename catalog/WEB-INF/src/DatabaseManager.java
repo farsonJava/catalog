@@ -11,9 +11,9 @@ import java.util.Map;
 import java.util.HashMap;
 
 public class DatabaseManager {
-	// Replace below paths with your full path to users.txt and carts.txt in the project database folder.
-	private String USERS_PATH; //= "C:\\Users\\Arthur\\Desktop\\Tomcat\\apache-tomcat-9.0.112\\webapps\\catalog\\WEB-INF\\database\\users.txt";
-	private String CARTS_PATH; // = "C:\\Users\\Arthur\\Desktop\\Tomcat\\apache-tomcat-9.0.112\\webapps\\catalog\\WEB-INF\\database\\carts.txt";
+	
+	private String USERS_PATH;
+	private String CARTS_PATH; 
 
 	public DatabaseManager(String USERS_PATH, String CARTS_PATH){
 		this.USERS_PATH = USERS_PATH;
@@ -105,41 +105,5 @@ public class DatabaseManager {
 		} catch (Exception e) {
 			System.out.println("UNEXPECTED ERROR OCCURED.");
 		}
-	}
-	public static void main(String[] args) {
-		/*/ UserManager userManager = new UserManager();
-		CartManager cartManager = new CartManager();
-		
-		CartItem cartItem = new CartItem("imgAdd", "Hoe", 2);
-		CartItem cartItem2 = new CartItem("img0", "Rake", 5);
-		CartItem cartItem3 = new CartItem("img4", "Shovel", 6);
-		
-		User user1 = new User("arthur.seleznov@gmail.com", "pass123", "Arthur", "Seleznov");
-		User user2 = new User("john.murphy@gmail.com", "pass123", "John", "Murphy");
-		User user3 = new User("scott.delaware@gmail.com", "pass123", "Scott", "Delaware");
-		
-		userManager.registerUser(user1);
-		userManager.registerUser(user2);
-		userManager.registerUser(user3);
-		
-		cartManager.cartCreation(userManager);
-		
-
-		cartManager.addToCart(user1.getEmail(), cartItem);
-		
-		cartManager.getUserCart(user2.getEmail());
-		cartManager.addToCart(user3.getEmail(), cartItem3);
-		
-		cartManager.getUserCart(user3.getEmail());
-		cartManager.addToCart(user3.getEmail(), cartItem2);
-		cartManager.addToCart(user3.getEmail(), cartItem2);
-		
-		System.out.println(cartManager.getUserCart(user1.getEmail()));
-		System.out.println(cartManager.getUserCarts());
-		System.out.println(cartManager.getUserCart(user2.getEmail()));
-		DatabaseManager db = new DatabaseManager();
-		
-		db.writeUserCarts(cartManager.getUserCarts());
-		db.writeUsers(userManager.getUsers()); */
 	}
 }
