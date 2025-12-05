@@ -34,6 +34,15 @@ Java objects are serialized by the persistence mechanism, allowing them to persi
 
 This is code taken from the loginAction method in the access servlet that's part of a series of conditional statements which is evaluating session data to prevent
 users from being able to log in with stale session data after reverting back to the login page. The conditional statement in the article shown above is checking whether the 
-session attributes are not null, and then whether they correspond to the request attribute data which was sent by the client using an HTMLsubmission form. 
+session attributes are not null, and then whether they correspond to the request attribute data which was sent by the client using an HTML submission form.
+
+If the session data and the request data correspond then the userToLogin check will be skipped and the client will gain access to the site and retain session
+data in the form of their email without having to submit it again. At this stage in the program once the client is logged in, their session data becomes valuable
+and sensitive in the context of the site as they are able to make purchases associated with that account on the basis of the session attribute storing their 
+email- whenever the client hits the servlet endpoints availible from the main body of the site which requires a login, the subsequent servlet logic determines
+which account is going to participate in the transaction based on the session "email" attribute. 
+
+As such, it now becomes apparent that a pattern for storing data across requests after login has to include session attributes, and that session handling
+across your application is a key security concern. 
 
 
