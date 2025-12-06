@@ -74,7 +74,7 @@ was decoupled from the user model and only defined within the CartManager class-
 <img width="516" height="238" alt="cart3" src="https://github.com/user-attachments/assets/1cdd9090-2fbf-4fee-9f7c-00d4850a52fd" />
 
 The solution in the article above ensures that the creation of the hashmap nested within userCarts is going to happen in the event that the email retrieved from the session attribute
-is not a key associated with the hashmap. 
+is not a key associated with the hashmap (Which was inevitable for the first time a user puts something in their cart).
 
 Earlier on in development, in order to reconcile the backend-model and the view-model, a custom equals method for the User class defined its email property as the compared value. We can use the email attribute as though it logically represents a user object through the .equals method in our application. It's a safe piece of meaningful data that we don't mind exposing and nonetheless we procured it after a secure login-check so it qualifies as a good candidate for a unique session identifier for a user. But not only that- it also allows us to keep full User objects out of our cart servlet class and deal with them by referencing their email only. 
 
