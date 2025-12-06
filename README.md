@@ -17,7 +17,7 @@ In order to run this application you need Tomcat 9+.
 
 2.) Allow users to relog.
 
-3.) The data which persists associated with a certain user is the items they placed in their cart.
+3.) The data which persists associated with a certain user are the items they placed in their cart.
 
 # Challenges
 ## Understanding the client model and HTTP to control the flow of java servlet programs by secure session handling
