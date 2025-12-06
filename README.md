@@ -131,8 +131,9 @@ to the page we expect that function to be called from. This introduces additiona
 
 ## init() and destroy() methods for persistence
 <img width="716" height="325" alt="db" src="https://github.com/user-attachments/assets/4bb25daf-f8aa-401f-afbe-502b2ca2f3ba" />
+
 The domain models which are intended for persistence are reloaded by using their respective manager classes. User objects are associated with their email and password, and the concept of registration requires a mechanism that 
 saves their data across sessions so they can relog using private information. 
-The email property  associates users  with other types of data and enables a decoupled relationship. Therefore, the CartManager class is persisted and decoupled- its entirely seperate
-from the user objects although it is logically related since the .equals method renders the user's email property as their equalizer. By having made a design where sensitive data is accessed by having your email stored in session data once you have logged in
+The email property is the bridge which associates users  with other types of data and enables a decoupled relationship. Therefore, the CartManager class is persisted and decoupled from Users- its entirely seperate
+from User objects although it is logically related since the overriden .equals method renders the User's email property as their key. By having made a design where sensitive data is accessed by having your email stored in session data once you have logged in
 the CartManager class can be logically related to the users while decoupled as an object, and therefore it may associate transactions with the respective user accounts regardless. 
