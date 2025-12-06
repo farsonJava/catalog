@@ -141,3 +141,13 @@ the CartManager class can be logically related to the users while decoupled as a
 
 The user/cart manager classes contain an array of all saved carts and users which is then serialized using IO streams into a folder called database. This is a provisional system not using JDBC just to demonstrate the structure of database logic, and learn about 
 the patterns which are employed for persistent data management. 
+
+## Lack of TDD significantly slowed down debugging process
+After working on this project, it quickly became clear during the first hurdle (the nested hashmap design) that reloading the tomcat server continually was an extremely inefficent way of testing and iterating on the program.
+For a domain this complex, especially in the context of a web app in which numerous branches of execution can be performed by site navigation patterns alone, a system of tests is necessary for truly evaluating the functionality and security of the program.
+Various issues regarding the soundness of session state had to be troubleshooted by navigating the site in unpredictable patterns to create unintended data leaks. After editing the code this had to be replicated over and over. This also speaks to the fact that
+the current design is insecure and overly complex especially on the basis of how difficult it is to test. This highlights the utility and necessity of modern backend frameworks which leverage HTTP objects and java servlet apis under the hood for systems with greater
+security and easier testability (such as the Spring Framework). 
+
+With standardizing security by handling lower level boilerplate patterns like login/registration logic, alongside DIP, IOC, and other security features for transactions etc, you are free to focus on the logic behind your program and outsource 
+many of the concerns dealt with in this project. 
