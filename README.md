@@ -88,7 +88,7 @@ These are all attributes contained in the HTML form- its values depend on which 
 
 As we mentioned earlier, 
 .equals method overriding allows our hashmap to recognize equality despite objects having different memory addresses and not really being the same. In the instance of our cartItem object, it's name property determines its equality and therefore
-we are able to reason within this method about new cartItem objects being created as the same keys to keep increasing their quantity- while retaining their complex properties and allowing them to be parameterized dynamically by whatever data in the request
+we are able to reason within this method about new cartItem objects being created as the same keys (if they have the same name) to keep increasing their quantity- while retaining their complex properties and allowing them to be parameterized dynamically by whatever data in the request
 corresponds to their fields.
 
 ### CartItem equals override method:
