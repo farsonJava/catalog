@@ -1,4 +1,4 @@
-h# Servlets with Tomcat
+# Servlets with Tomcat
 Simple backend servlets made from using the Tomcat Servlet container for studying server-side logic on a lower level.
 
 This project was developed for educational purposes during the course of my studies on the inner workings of servlet containers,
