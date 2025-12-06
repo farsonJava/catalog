@@ -56,3 +56,7 @@ who's cart must an item be added and therefore you are redirected to the login p
 As this is a very minimal front end design, our backend logic uses a redirect method to the same page after clicking on a store item and adding it to cart, reloading the entire HTML page.
 Through frameworks or libraries that manipulate the DOM in javascript these sorts of workarounds are not required. 
 
+Modern backend systems are based on JSON objects, not HTML defined attributes from forms. Javascript would perform an asynchronous fetch to create a requests and recieve responses that 
+are predicated on JSON data encoded in the bodies of the HTTP methods. Javascript would use the browser runtime to interact with DOM libraries in order to update its client side info
+pertaining to information on its updated cart etc.
+
