@@ -128,3 +128,11 @@ to the page we expect that function to be called from. This introduces additiona
 
 ### For instance, this logOut method will be invoked if action.equals("logout"). 
 <img width="910" height="249" alt="snip" src="https://github.com/user-attachments/assets/8d89a517-99f4-42db-bd91-b70399c84c31" />
+
+## init() and destroy() methods for persistence
+<img width="716" height="325" alt="db" src="https://github.com/user-attachments/assets/4bb25daf-f8aa-401f-afbe-502b2ca2f3ba" />
+The domain models which are intended for persistence are reloaded by using their respective manager classes. User objects are associated with their email and password, and the concept of registration requires a mechanism that 
+saves their data across sessions so they can relog using private information. 
+The unique identifier which users have a relationship to which associates them with other types of data is their email. Therefore, the CartManager class is persisted and decoupled- its entirely seperate
+from the user objects although it is logically related through the .equals method since the user's email property is their equalizer. By having made a design where sensitive data is accessed by having your email stored in session data once you have logged in
+the CartManager class can be logically related to the users while decoupled as an object, and therefore it may associate transactions with the respective user accounts regardless. 
