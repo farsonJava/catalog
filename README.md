@@ -80,3 +80,7 @@ Earlier in development a custom equals method for the User class defined its ema
 
 In this instance, our cartServlet that will use our CartManager method addToCart will have access to a session attribute "email" and it will ask if there is a value stored for that key in the userCarts object- if there isn't, it will procure one. Using the getOrDefault
 method we are able to safely deal with instances where we either already have a value higher than one or not, and increment it by one regardless.
+
+### note:
+If you scroll back up to article "servlet accessed after login" you will see the addToCart method within the doPost method. You may observe that the "item" object is composed of data extracted from attributes in the request object.
+These are all attributes contained in the HTML form- its values depend on which item in the shop you click on. The email is of course derived from the session state, and the item is built out of the content of the request. 
