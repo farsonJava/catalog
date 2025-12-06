@@ -60,4 +60,10 @@ Modern backend systems are based on JSON objects, not HTML defined attributes fr
 are predicated on JSON data encoded in the bodies of the HTTP methods. Javascript would use the browser runtime to interact with DOM libraries in order to update its client side state segmentally without 
 reloading the entire page. In this instance it would update the view of the cart to include whichever item was clicked on in the shop. 
 
+## Working with the domain model: nested data-structure solution
 
+
+<img width="608" height="182" alt="domain" src="https://github.com/user-attachments/assets/3839c365-56e0-45eb-ad25-2b2b12570b88" />
+
+The most complex element of the domain model culminated in the "CartManager" class which contained an instance field "userCarts", which is
+a hashmap with a key of a string (user email) and a value of another hashmap (which contained a key of items, and a value of the quantity contained within the cart).
