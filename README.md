@@ -84,7 +84,9 @@ method we are able to safely deal with instances where we either already have a 
 
 ### note:
 If you scroll back up to article "servlet accessed after login" you will see the addToCart method within the doPost method. You may observe that the "item" object is composed of data extracted from attributes in the request object.
-These are all attributes contained in the HTML form- its values depend on which item in the shop you click on. The email is of course derived from the session state, and the item is built out of the content of the request. As we mentioned earlier, 
+These are all attributes contained in the HTML form- its values depend on which item in the shop you click on. The email is of course derived from the session state, and the item is built out of the content of the request. 
+
+As we mentioned earlier, 
 .equals method overriding allows our hashmap to recognize equality despite objects having different memory addresses and not really being the same. In the instance of our cartItem object, it's name property determines its equality and therefore
 we are able to reason within this method about new cartItem objects being created as the same keys to keep increasing their quantity- while retaining their complex properties and allowing them to be parameterized dynamically by whatever data in the request
 corresponds to their fields.
