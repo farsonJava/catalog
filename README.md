@@ -79,4 +79,4 @@ is not a key associated with the hashmap.
 Earlier on in development, in order to reconcile the backend-model and the view-model, a custom equals method for the User class defined its email property as the compared value. We can use the email attribute as though it logically represents a user object through the .equals method in our application. It's a safe piece of meaningful data that we don't mind exposing and nonetheless we procured it after a secure login-check so it qualifies as a good candidate for a unique session identifier. But not only that- it also allows us to keep full User objects out of our cart servlet class and deal with them by referencing their email only. 
 
 In this instance, our cartServlet that will use our CartManager method addToCart will have access to a session attribute "email" and it will ask if there is a value stored for that key in the userCarts object- if there isn't it will procure one. Using the getOrDefault
-method we are able to 
+method we are able to safely deal with instances where we either already have a value higher than one or not, and increment it by one regardless.
