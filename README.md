@@ -153,3 +153,7 @@ security and easier testability (such as the Spring Framework).
 
 With standardizing security by handling lower level boilerplate patterns like login/registration logic, alongside DIP, IOC, and other security features for transactions etc, you are free to focus on the logic behind your program and outsource 
 many of the concerns dealt with in this project. 
+### Example of code pollution during testing
+<img width="870" height="636" alt="codepollution" src="https://github.com/user-attachments/assets/e100c49a-b863-479f-ae28-0885b6dd1798" />
+In the article shown above, I created a main method in the cartmanager class while trying to troubleshoot and understand how to implement the nested hashmap design which decoupled users objects from their cart item hashmaps. My initial patchwork quilt solution
+was to create a function in the init() method which takes every user from userManagers are create empty cartItem hashmaps for all of them on the basis of their email. This led to unprecdented bugs and only worked after one restart, and stopped me from thinking about the much simpler solution I came up with later while damaging the codebase with tests inside of main methods and useless functions, as well as making me waste time on testing the program by starting and restarting tomcat. 
