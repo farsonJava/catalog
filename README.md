@@ -135,9 +135,9 @@ to the page we expect that function to be called from. This introduces additiona
 The domain models which are intended for persistence are reloaded by using their respective manager classes. User objects are associated with their email and password, and the concept of registration requires a mechanism that 
 saves their data across sessions so they can relog using private information. 
 
-The email property is the bridge which associates users  with other types of data and enables a decoupled relationship. Therefore, the CartManager class is persisted and decoupled from Users- its entirely seperate
-from User objects although it is logically related since the overriden .equals method renders the User's email property as their key. By having made a design where sensitive data is accessed by having your email stored in session data once you have logged in
-the CartManager class can be logically related to the users while decoupled as an object, and therefore it may associate transactions with the respective user accounts regardless. 
+The email property is the bridge which associates users  with other types of data and enables a decoupled relationship. Therefore, the CartManager class can be persisted on its own while being decoupled from User objects- its entirely seperate
+from them although it is logically related since the overriden .equals method renders the User's email property as their key. By having made a design where sensitive data is accessed by having your email stored in session data once you have logged in
+the CartManager class can be logically related to the users while decoupled as an object, and therefore it may associate transactions with the respective user accounts while remaining a seperate concern. 
 
 The user/cart manager classes contain an array of all saved carts and users which is then written using IO streams into a folder called database. This is a provisional system not using JDBC just to demonstrate the structure of database logic, and learn about 
 the patterns which are employed for persistent data management. 
