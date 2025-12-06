@@ -156,4 +156,9 @@ many of the concerns dealt with in this project.
 ### Example of code pollution during testing
 <img width="870" height="636" alt="codepollution" src="https://github.com/user-attachments/assets/e100c49a-b863-479f-ae28-0885b6dd1798" />
 In the article shown above, I created a main method in the cartmanager class while trying to troubleshoot and understand how to implement the nested hashmap design which decoupled users objects from their cart item hashmaps. My initial patchwork quilt solution
-was to create a function in the init() method which takes every user from userManagers are create empty cartItem hashmaps for all of them on the basis of their email. This led to unprecdented bugs and only worked after one restart, and stopped me from thinking about the much simpler solution I came up with later while damaging the codebase with tests inside of main methods and useless functions, as well as making me waste time on testing the program by starting and restarting tomcat. 
+stopped null pointer errors but only worked after a restart- I spent a long time creating useless functions and restarting tomcat to test my code before I came up with the aforementioned simpler solution. A lot of time could have been saved if I had a reliable testing framework- one fix often broke something else and I wouldn't recognize there was an error until much later- this experience was also very instructive as for the usefulness of a version control system. Without one, it may be impossible after a certain point to tell 
+which change caused which side effect. 
+
+### Conclusion
+Having coded my own servlets was incredibly helpful for starting to appreciate modern solutions while giving me a greater understanding of what they may be doing under the hood. Reading about the role of the servlet container, configuring classpaths, and straining to 
+implement designs has given me greater control and confidence with higher level frameworks that streamline these processes. 
