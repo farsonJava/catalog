@@ -28,7 +28,7 @@ The synergy between session attributes, Java objects, and request parameters is 
 Tomcat propagates session attributes until shutdown, request parameters exist only for individual requests, and our 
 Java objects are serialized by the persistence mechanism, allowing them to persist across program restarts—or conceptually, across user logins and logouts.
 
-### session object Vs. request object
+### session object Vs. request object:
 
 <img width="764" height="437" alt="image6" src="https://github.com/user-attachments/assets/14dc0352-2cce-4439-a69b-383497ddb696" />
 
@@ -47,6 +47,7 @@ across your application is a key security concern.
 
 ### servlet accessed after login:
 <img width="933" height="547" alt="a123" src="https://github.com/user-attachments/assets/ae86d23d-7f3b-4132-ac64-c0837be9a798" />
+
 Looking at the article above it's much easier to understand whats going on. The add to cart logic determines who's cart is being added to on the basis of a sensitive session attribute
 that was only saved through passing rigorous login logic that was protected by a password. If that attribute doesn't exist or isn't saved in the session attribute our servlet won't know to
 who's cart must an item be added and therefore you are redirected to the login page. 
