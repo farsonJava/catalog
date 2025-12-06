@@ -70,3 +70,8 @@ a hashmap with a key of a string (user email) and a value of another hashmap (wh
 
 The most critical issue that arose during the development of this project was that the hashmap nested within userCarts which was meant to be associated with a user's email key
 was decoupled from the user model and only defined within the CartManager class- therefore its creation and instantiation needed to happen within its own methods. 
+### The solution I settled on:
+<img width="516" height="238" alt="cart3" src="https://github.com/user-attachments/assets/1cdd9090-2fbf-4fee-9f7c-00d4850a52fd" />
+The solution in the article above ensures that the creation of the hashmap nested within userCarts is going to happen in the event that the email retrieved from the session attribute
+is not a key associated with the hashmap. 
+
