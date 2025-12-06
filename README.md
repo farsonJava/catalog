@@ -99,7 +99,7 @@ our logic is just looking for their names to be the same for its functionality a
 
 A key insight from this project is that complex domain model objects must override equals and hashCode when they are used as keys in a hashmap in order to enable correct key equality, fully utilizing the hashmap data structure.
 
-# Web App Architecture: Implementing controller design through orchestrating HTML form content, web xml and servlet logic. 
+## Web App Architecture: Implementing controller design through orchestrating HTML form content, web xml and servlet logic. 
 
 The system of process selection in this web app is defined by the various elements that compose an endpoint, and the design chosen for encapsulating
 all servlet access logic in the same class is that of the "controller". This is implemented by having every HTTP request contain the same "POST" method when its associated with the
