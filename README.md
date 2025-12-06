@@ -87,7 +87,7 @@ If you scroll back up to article "servlet accessed after login" you will see the
 These are all attributes contained in the HTML form- its values depend on which item in the shop you click on. The email is of course derived from the session state, and the item is built out of the content of the request. 
 
 As we mentioned earlier, 
-.equals method overriding allows our hashmap to recognize equality despite objects having different memory addresses and not really being the same. In the instance of our cartItem object, it's name property determines its equality and therefore
+.equals method overriding allows our hashmap to recognize equality despite objects having different memory addresses and not really being the same. In the instance of our cartItem object, its name property determines its equality and therefore
 we are able to reason within this method about new cartItem objects being created as the same keys (if they have the same name) to keep increasing their quantity- while retaining their complex properties and allowing them to be parameterized dynamically by whatever data in the request
 corresponds to their fields. 
 
@@ -98,4 +98,15 @@ our logic is just looking for their names to be the same for its functionality a
 <img width="535" height="291" alt="hash" src="https://github.com/user-attachments/assets/fc7bbdfa-32c7-468d-9741-c32c9f9bb1b2" />
 
 A key insight from this project is that complex domain model objects must override equals and hashCode when they are used as keys in a hashmap in order to enable correct key equality, fully utilizing the hashmap data structure.
+
+# Web App Architecture: Implementing controller design through orchestrating HTML form content and web xml. 
+
+The system of process selection in this web app is defined by the various elements that compose an endpoint, and the design chosen for encapsulating
+all servlet access logic in the same class is that of the "controller". This is implemented by having every HTTP request contain the same "POST" method when its associated with the
+access servlet, so that the HTML "value" attribute is evaluated in a switch case that delegates to a respective function call.
+
+
+
+
+
 
