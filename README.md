@@ -67,3 +67,6 @@ reloading the entire page. In this instance it would update the view of the cart
 
 The most complex element of the domain model culminated in the "CartManager" class which contained an instance field "userCarts", which is
 a hashmap with a key of a string (user email) and a value of another hashmap (which contained a key of items, and a value of the quantity contained within the cart).
+
+The most critical issue that arose during the development of this project was that the hashmap nested within userCarts which was meant to be associated with a user's email key
+was decoupled from the user model and only defined within the CartManager class- therefore its creation and instantiation needed to happen within its own methods. 
