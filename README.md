@@ -123,7 +123,7 @@ to the page we expect that function to be called from. This introduces additiona
 ### HTML form specifiying "POST", catalog/access servlet entry point, and the value "logout" which will be evaluated in the switch case. (Note name="action". This is the variable in which the value attribute will be stored when its retrieved in our request object.)
 <img width="1045" height="23" alt="functoin" src="https://github.com/user-attachments/assets/6d303725-d63a-48bd-9aee-9ff824e10242" />
 
-### The controller that will be hit for all post requests directed to the access servlet.
+### The controller that will be hit for all post requests directed to the access servlet. All the methods that are called respective to the action value are within the same servlet class.
 <img width="917" height="461" alt="action" src="https://github.com/user-attachments/assets/681cc589-d8a6-4c24-a094-8b9863dc2430" />
 
 
