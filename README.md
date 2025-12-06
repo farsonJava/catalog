@@ -126,5 +126,5 @@ to the page we expect that function to be called from. This introduces additiona
 ### The controller that will be hit for all post requests directed to the access servlet. All the methods that are called respective to the action value are within the same servlet class.
 <img width="917" height="461" alt="action" src="https://github.com/user-attachments/assets/681cc589-d8a6-4c24-a094-8b9863dc2430" />
 
-### For instance, this logOut method will be invoked if action.equals("logOut"). 
+### For instance, this logOut method will be invoked if action.equals("logout"). 
 <img width="910" height="249" alt="snip" src="https://github.com/user-attachments/assets/8d89a517-99f4-42db-bd91-b70399c84c31" />
