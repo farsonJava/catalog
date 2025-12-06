@@ -1,4 +1,4 @@
-# Servlets with Tomcat
+h# Servlets with Tomcat
 Simple backend servlets made from using the Tomcat Servlet container for studying server-side logic on a lower level.
 
 This project was developed for educational purposes during the course of my studies on the inner workings of servlet containers,
@@ -88,3 +88,9 @@ These are all attributes contained in the HTML form- its values depend on which 
 .equals method overriding allows our hashmap to recognize equality despite objects having different memory addresses and not really being the same. In the instance of our cartItem object, it's name property determines its equality and therefore
 we are able to reason within this method about new cartItem objects being created as the same keys to keep increasing their quantity- while retaining their complex properties and allowing them to be parameterized dynamically by whatever data in the request
 corresponds to their fields.
+
+### cartItem equals override method:
+<img width="535" height="291" alt="hash" src="https://github.com/user-attachments/assets/fc7bbdfa-32c7-468d-9741-c32c9f9bb1b2" />
+
+A key insight from this project is that complex domain model objects must override equals and hashCode when they are used as keys in a hashmap in order to enable correct key equality, fully utilizing the hashmap data structure.
+
