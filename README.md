@@ -113,7 +113,7 @@ HTML Form → POST → AccessServlet → switch → Method → Redirect
 
 ### note:
 Notice the limitations of not leveraging the DOM API- the implication of being able to access the access servlet endpoint from any page in our web app means that we are forced to create redirects 
-to the page we expect that function to be called from. This introduces additional coupling between backend logic and frontend navigation and can complicate overall design, and is normally avoided through using modern frontend frameworks.
+to the page we expect that function to be called from. This introduces additional coupling between backend logic and frontend navigation complicating overall design. One way this can be avoided is through using modern frontend frameworks like those of javascript.
 
 
 
