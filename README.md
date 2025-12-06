@@ -14,7 +14,9 @@ In order to run this application you need Tomcat 9+.
 
 ## Functionality:
 1.) Create user accounts who have data created in the site that persists across server restarts.
+
 2.) Allow users to relog.
+
 3.) The data which persists associated with a certain user is the items they placed in their cart.
 
 # Challenges
