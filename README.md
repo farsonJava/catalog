@@ -56,7 +56,7 @@ who's cart must an item be added and therefore you are redirected to the login p
 As this is a very minimal front end design, our backend logic uses a redirect method to the same page after clicking on a store item and adding it to cart, reloading the entire HTML page.
 Through frameworks or libraries that manipulate the DOM in javascript these sorts of workarounds are not required. 
 
-Modern backend systems are based on JSON objects, not HTML defined attributes from forms. Javascript would perform an asynchronous fetch to create requests and recieve responses that 
+Modern backend systems are based on JSON objects, not HTML defined attributes from forms. Javascript would perform an asynchronous fetch to create requests and receive responses that 
 are predicated on JSON data encoded in the bodies of the HTTP methods. Javascript would use the browser runtime to interact with DOM libraries in order to update its client side state segmentally without 
 reloading the entire page. In this instance it would update the view of the cart to include whichever item was clicked on in the shop. 
 
@@ -105,7 +105,7 @@ The system of process selection in this web app is defined by the various elemen
 all servlet access logic in the same class is that of the "controller". This is implemented by having every HTTP request contain the same "POST" method when its associated with the
 access servlet, so that the HTML "value" attribute is evaluated in a switch case that delegates to a respective function call.
 
-web.xml's servlet mapping esnures that access logic is centralized in a single servlet and every POST request associated with the "access" entry 
+web.xml's servlet mapping ensures that access logic is centralized in a single servlet and every POST request associated with the "access" entry 
 is routed through a doPost method with a switch case which acts as a controller. This means that the combination of "POST", catalog/access/ + a value attribute
 that is associated with an access servlet function call, can be inserted anywhere in the program to access logic from that single servlet class.
 
@@ -120,7 +120,7 @@ to the page we expect that function to be called from. This introduces additiona
 
 <img width="425" height="170" alt="servlet" src="https://github.com/user-attachments/assets/74fa7f05-ff40-4c85-a007-ab72265e7e53" />
 
-### HTML form specifiying "POST", catalog/access servlet entry point, and the value "logout" which will be evaluated in the switch case. (Note name="action". This is the variable in which the value attribute will be stored when its retrieved in our request object.)
+### HTML form specifying "POST", catalog/access servlet entry point, and the value "logout" which will be evaluated in the switch case. (Note name="action". This is the variable in which the value attribute will be stored when its retrieved in our request object.)
 <img width="1045" height="23" alt="functoin" src="https://github.com/user-attachments/assets/6d303725-d63a-48bd-9aee-9ff824e10242" />
 
 ### The controller that will be hit for all post requests directed to the access servlet. All the methods that are called respective to the action value are within the same servlet class.
