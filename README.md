@@ -19,6 +19,14 @@ In order to run this application you need Tomcat 9+.
 
 3.) Persist user-specific data, such as items added to their cart.
 
+## Installation:
+
+1.) Install Tomcat 9
+
+2.) Copy the catalog folder into Tomcat’s webapps directory.
+
+3.) Start Tomcat and open the application in your browser at: http://localhost:8080/catalog
+
 # Challenges
 ## Understanding the client model and HTTP to control the flow of java servlet programs by secure session handling
 
