@@ -161,5 +161,8 @@ stopped null pointer errors but only worked after a restart- I spent a long time
 which change caused which side effect. 
 
 ### Conclusion
-Having coded my own servlets was incredibly helpful for starting to appreciate modern solutions while giving me a greater understanding of what they may be doing under the hood. Reading about the role of the servlet container, configuring classpaths, and straining to 
-implement designs has given me greater control and confidence with higher level frameworks that streamline these processes. 
+
+
+While this is far from idiomatic production code, having constructed my own servlets was incredibly helpful for starting to appreciate modern solutions while giving me a greater understanding of what they may be doing under the hood. Reading about the role of the servlet container, configuring classpaths, and straining to 
+implement lower level designs has given me greater control and confidence with higher level frameworks that streamline these processes. 
+
