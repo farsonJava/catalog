@@ -120,7 +120,7 @@ to the page we expect that function to be called from. This introduces additiona
 
 <img width="425" height="170" alt="servlet" src="https://github.com/user-attachments/assets/74fa7f05-ff40-4c85-a007-ab72265e7e53" />
 
-### HTML form specifiying "POST", catalog/access servlet entry point, and the value "logout" which will be evaluated in the switch case. (Note that name="action". This is the variable in which the value attribute will be stored when its retrieved in our request object.)
+### HTML form specifiying "POST", catalog/access servlet entry point, and the value "logout" which will be evaluated in the switch case. (Note name="action". This is the variable in which the value attribute will be stored when its retrieved in our request object.)
 <img width="1045" height="23" alt="functoin" src="https://github.com/user-attachments/assets/6d303725-d63a-48bd-9aee-9ff824e10242" />
 
 ### The controller that will be hit for all post requests directed to the access servlet.
