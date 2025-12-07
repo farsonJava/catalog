@@ -164,7 +164,7 @@ Various issues regarding the soundness of session state had to be troubleshooted
 
 This also speaks to the fact that
 the current design is insecure and overly complex especially on the basis of how difficult it is to test. This highlights the utility and necessity of modern backend frameworks which abstract away the details of the java servlet to create standardized systems with greater
-security and easier testability (such as the Spring Framework). 
+security and easier testability (such as the Spring Framework which implements REST, thereby avoiding storing internal session state). 
 
 With standardizing security by handling lower level boilerplate patterns like login/registration logic, alongside DIP, IOC, and other security features for transactions etc, you are free to focus on the logic behind your program and outsource 
 many of the concerns dealt with in this project. 
