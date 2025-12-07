@@ -114,6 +114,10 @@ our logic is just looking for their names to be the same for its functionality a
 
 A key insight from this project is that complex domain model objects must override equals and hashCode when they are used as keys in a hashmap in order to enable correct key equality, fully utilizing the hashmap data structure.
 
+The email property is the bridge which associates users  with other types of data and enables them to have a decoupled relationship. Therefore, the CartManager class can be persisted on its own while being decoupled from User objects- its entirely seperate
+from them although it is logically related since the overriden .equals method renders the User's email property as their key (so both users and carts end up representing the same thing in a hashmap). In this design sensitive transactions are accessed by having your email stored in session state after you have logged in with a private property that's coupled with User called password.
+The CartManager class can be logically related to the users while decoupled as an object, and therefore it may facilitate sensitive transactions associated with respective user accounts while remaining a seperate concern, and yet its still part of the authentication flow by virtue of the fact that the design ensures the email only reaches the Cart related endpoints after the user inputs their private data in the form of a password at login. This way, it isn't using sensitive authenticated data like a password as a key for ensuring a specific user is targeted for a transaction. (In a real production application, passwords are hashed after the same concern). We can see how .hashcode() and .equals() overriding can make our application decoupled and secure.  
+
 ## Web App Architecture: Implementing controller design through orchestrating HTML form content, web xml and servlet logic. 
 
 The system of process selection in this web app is defined by the various elements that compose an endpoint, and the design chosen for encapsulating
@@ -149,10 +153,6 @@ to the page we expect that function to be called from. This introduces additiona
 
 The domain models which are intended for persistence are reloaded by using their respective manager classes. User objects are associated with their email and password, and the concept of registration requires a mechanism that 
 saves their data across sessions so they can relog using private information. 
-
-The email property is the bridge which associates users  with other types of data and enables a decoupled relationship. Therefore, the CartManager class can be persisted on its own while being decoupled from User objects- its entirely seperate
-from them although it is logically related since the overriden .equals method renders the User's email property as their key (so both users and carts end up representing the same thing in a hashmap). By having made a design where sensitive data is accessed by having your email stored in session data once you have logged in
-the CartManager class can be logically related to the users while decoupled as an object, and therefore it may associate transactions with the respective user accounts while remaining a seperate concern. 
 
 The user/cart manager classes contain hashmaps of all saved carts and users which are then serialized using IO streams into a folder called database. This is a provisional system not using JDBC just to demonstrate the structure of database logic, and learn about 
 the patterns which are employed for persistent data management. 
