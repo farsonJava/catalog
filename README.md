@@ -192,7 +192,7 @@ load factoring on the server. Containing authentication data within requests als
 Additionally, the maintainability of a codebase adhering to rest constraints is far greater so far as resource based requests can adhere to HTTP semantics. Our "POST" request routing system isn't an idiomatic usage of HTTP rather than a makeshift tunnel
 for containing all access servlet logic within the same class. HTTP methods were intended to be a uniform interface for being able to complete CRUD operations - the way in which a process is selected is meant to be simply derived from a resource and HTTP method combination. 
 
- In a modern solution resource details are contained within request bodies in the form of JSON payloads, and URLs are standardized using the broad definition of the resource. This allows the same endpoint to handle multiple operations, thus achieving
+ In a modern solution resource details are contained within request bodies in the form of JSON payloads, and URLs are standardized using the name of the resource. This allows the same endpoint to handle multiple operations, thus achieving
  confluence with the web architecture principle of "uniform interfaces" supporting client/server decoupling and statelessness. As seen within our project, the refactoring, scaling, and cognitive pressure for the mental
 model of endpoint orchestration (HTML form values and attributes, servlet names in web.xml, and controllers for delegating function calls to actions) can cause issues for extending the codebase. 
 
