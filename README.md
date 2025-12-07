@@ -186,7 +186,7 @@ Having worked on a non-REST API endpoint design highlights some of the advantage
 architecture such as the controller mechanism showcased here. Client side token systems for handling session-scope information improve security and load factoring for servers as:
 
 1.) If server memory stores individual client data, it limits horizontal scalability (as would be the case within this design). For example, resource based requests + JWT tokens create synergy for functional and secure shared / per user  caching in the gateway to reduce
-load factoring on the server. Containing authentication data within requests also create a simpler stateless auth system so any server can handle them.
+load balancing on the server. Containing authentication data within requests also create a simpler stateless auth system so any server can handle them.
 
 2.) Storing individual client data in server memory through a session object rather than retrieving it from the request itself increases the risk of unintended exposure due to complex logic errors. 
 
