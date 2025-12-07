@@ -194,7 +194,9 @@ for containing all access servlet logic within the same class. HTTP methods were
 
  In a modern solution resource details are contained within request bodies in the form of JSON payloads, and URLs are standardized using the broad definition of the resource This allows the same endpoint to handle multiple operations, thus achieving
  confluence with the web architecture principle of uniform interfaces supporting client / server decoupling and statelessness. As seen within our project, the refactoring, scaling, and cognitive pressure for the mental
-model of endpoint orchestration (HTML form values and attributes, servlet names in web.xml, and controllers for delegating function calls to actions) can cause issues for extending the codebase.
+model of endpoint orchestration (HTML form values and attributes, servlet names in web.xml, and controllers for delegating function calls to actions) can cause issues for extending the codebase. 
+
+
 
 
 
