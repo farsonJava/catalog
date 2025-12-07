@@ -154,7 +154,7 @@ The email property is the bridge which associates users  with other types of dat
 from them although it is logically related since the overriden .equals method renders the User's email property as their key (so both users and carts end up representing the same thing in a hashmap). By having made a design where sensitive data is accessed by having your email stored in session data once you have logged in
 the CartManager class can be logically related to the users while decoupled as an object, and therefore it may associate transactions with the respective user accounts while remaining a seperate concern. 
 
-The user/cart manager classes contain an array of all saved carts and users which is then serialized using IO streams into a folder called database. This is a provisional system not using JDBC just to demonstrate the structure of database logic, and learn about 
+The user/cart manager classes contain hashmaps of all saved carts and users which are then serialized using IO streams into a folder called database. This is a provisional system not using JDBC just to demonstrate the structure of database logic, and learn about 
 the patterns which are employed for persistent data management. 
 
 ## Lack of TDD significantly slowed down debugging process
