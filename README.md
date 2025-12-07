@@ -112,7 +112,7 @@ our logic is just looking for their names to be the same for its functionality a
 ### CartItem equals override method:
 <img width="535" height="291" alt="hash" src="https://github.com/user-attachments/assets/fc7bbdfa-32c7-468d-9741-c32c9f9bb1b2" />
 
-A key insight from this project is that complex domain model objects must override equals and hashCode when they are used as keys in a hashmap in order to enable correct key equality, fully utilizing the hashmap data structure. Lets take a look at our specific instance to make some important considerations about the usefulness of hashmaps in backend design: 
+A key insight from this project is that complex domain model objects must override equals and hashCode when they are used as keys in a hashmap in order to enable correct key equality, thus fully utilizing the hashmap data structure. Lets take a look at the specific instance of our project to make some important considerations about the usefulness of hashmaps in backend design: 
 
 In this system the email property is the bridge which associates users  with other types of data and enables them to have a decoupled relationship. The CartManager is entirely seperate
 from them although it is logically related since the overriden .equals and .hashcode methods render the User object's email property as their key (so both users and carts end up representing the same thing in a hashmap). 
