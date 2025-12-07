@@ -175,7 +175,7 @@ In the article shown above, I created a main method in the cartmanager class whi
 stopped null pointer errors but only worked after a restart- I spent a long time creating useless functions and restarting tomcat to test my code before I came up with a simpler solution. A lot of time could have been saved if I had started this project with a reliable testing framework- one fix often broke something else and I wouldn't recognize there was an error until much later- this experience was also very instructive as for the usefulness of a version control system. Without one, it may be impossible after a certain point to tell 
 which change caused which side effect. 
 
-### Conclusion
+# Conclusion
 
 
 While this is far from idiomatic production code, having constructed my own servlets was incredibly helpful for starting to appreciate modern solutions while giving me a greater understanding of what they may be doing under the hood. Reading about the role of the servlet container, configuring classpaths, and straining to 
