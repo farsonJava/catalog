@@ -13,18 +13,7 @@ public User(String email, String password, String firstName, String lastName) {
 	this.lastName = lastName;
 	
 }
-public static void main(String[] args ) {
-	/*/ User user = new User("arthur", "lol");
-	User user1 = new User("dingus", "lol123");
-	User user2 = new User("arthur", "bitch");
-	System.out.println(user.equals(user2));
-	System.out.println(user.equals(user1));
-	
-	// Both should return true.
-	System.out.println(user.hashCode() == user2.hashCode());
-	System.out.println(user.hashCode() != user1.hashCode()); */
 
-}
 public User(String email, String password) {
 	this.email = email;
 	this.password = password;
