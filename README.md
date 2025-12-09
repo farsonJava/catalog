@@ -125,9 +125,9 @@ The system of process selection in this web app is defined by the various elemen
 all servlet access logic in the same class is that of the "controller". This is implemented by having every HTTP request contain the same "POST" method when its associated with the
 access servlet, so that the HTML "value" attribute is evaluated in a switch case that delegates to a respective function call.
 
-web.xml's servlet mapping ensures that access logic is centralized in a single servlet and every POST request associated with the "access" entry 
-is routed through a doPost method with a switch case which acts as a controller. This means that the combination of "POST", catalog/access/ + a value attribute
-that is associated with an access servlet function call, can be inserted anywhere in the program to access logic from that single servlet class.
+web.xml's servlet mapping defines the URL of our access servlet class, which centralizes all login/registration logic within its functions. Every POST request associated with the "access" entry 
+is routed through a doPost method with a switch case that acts as a controller (still within the same class). This means that the combination of "POST", catalog/access/ + a value attribute
+that is associated with an access servlet function call, can be inserted anywhere in the program to access any procedure from that single servlet class.
 
 HTML Form → POST → AccessServlet → switch → Method → Redirect
 
