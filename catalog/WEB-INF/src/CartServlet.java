@@ -13,7 +13,6 @@ import javax.servlet.http.HttpSession;
 public class CartServlet extends HttpServlet {
 	private CartManager cartManager;
 	private DatabaseManager db;
-	//private UserManager userManager;
 	private static final long serialVersionUID = 1003L;
 	private String usersPath;
 	private String cartsPath;
@@ -22,15 +21,7 @@ public class CartServlet extends HttpServlet {
 		this.usersPath = getServletContext().getRealPath("/WEB-INF/database/users.txt");
 		this.cartsPath = getServletContext().getRealPath("/WEB-INF/database/carts.txt");
 		this.db = new DatabaseManager(usersPath, cartsPath);
-		//this.userManager = new UserManager(db.getUsers());
-		
 		this.cartManager = new CartManager(db.getUserCarts());
-		
-		//cartManager.cartCreation(userManager, cartManager);
-		//if(this.cartManager.getUserCarts() == null) {
-	//	cartManager.cartCreation(userManager);
-	//	}
-
 		
 	}
 	@Override
