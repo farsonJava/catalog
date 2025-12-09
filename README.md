@@ -167,8 +167,8 @@ This also speaks to the fact that
 the current design is insecure and overly complex especially on the basis of how difficult it is to test. This highlights the utility and necessity of modern backend frameworks which abstract away the details of the java servlet to create standardized systems with greater
 security and easier testability (such as the Spring Framework which implements REST, thereby avoiding storing internal session state). 
 
-With standardizing security by handling lower level boilerplate patterns like login/registration logic, alongside DIP, IOC, and other security features for transactions etc, you are free to focus on the logic behind your program and outsource 
-many of the concerns dealt with in this project. 
+With standardizing security by handling lower level boilerplate patterns like login/registration logic, alongside DIP, IOC, and other security features for transactions etc, you are free to focus on the logic behind your program and automate 
+some of the concerns dealt with in this project. 
 ### Example of code pollution during testing
 <img width="870" height="636" alt="codepollution" src="https://github.com/user-attachments/assets/e100c49a-b863-479f-ae28-0885b6dd1798" />
 
