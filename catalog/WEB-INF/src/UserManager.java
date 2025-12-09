@@ -14,15 +14,6 @@ public class UserManager {
 	 this.users = new HashMap<String, User>();
 	 this.mapTest = toHashMap();
  }
- public static void main(String[] args) {
-	/* UserManager userManager = new UserManager();
-	 User user = new User("arthur.seleznov@gmail.com", "pass123", "Arthur", "Seleznov");
-	 User user2 = new User("william.murphy@gmail.com", "pass123", "William", "Murphy");
-	 userManager.registerUser(user2);
-	 userManager.registerUser(user);
-	 System.out.println(userManager.loginUser(user));
-	 System.out.println(userManager.getUsers()); */
- }
  
  public Map<String, User> getUsers() {
 	 return this.users;
