@@ -127,7 +127,7 @@ access servlet, so that the HTML "value" attribute is evaluated in a switch case
 
 web.xml's servlet mapping defines the URL of our access servlet class, which centralizes all login/registration logic within its functions. Every POST request associated with the "access" entry 
 is routed through a doPost method with a switch case that acts as a controller (still within the same class). This means that the combination of "POST", catalog/access/ + a value attribute
-that is associated with an access servlet function call, can be inserted anywhere in the program to access any procedure from that single servlet class.
+that is associated with an access servlet function call, can be inserted anywhere in the front end client to access any procedure from that single servlet class.
 
 HTML Form → POST → AccessServlet → switch → Method → Redirect
 
