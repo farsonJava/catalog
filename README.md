@@ -30,7 +30,7 @@ In order to run this application you need Tomcat 9+.
 # Challenges
 ## Understanding the client model and HTTP to control the flow of java servlet programs by secure session handling
 
-Although HTTP methods are stateless, they suggest a client model. In order to become comfortable with 
+Although HTTP is stateless, it can suggest a client model. In order to become comfortable with 
 the servlet API and have command over the control flow of your program it's important to distinguish between the various components
 of an HTTP request including headers, body, and cookies. 
 
